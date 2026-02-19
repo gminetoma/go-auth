@@ -1,0 +1,17 @@
+{
+  "name": "api",
+  "private": true,
+  "scripts": {
+    "dev": "air",
+    "migrate:up": "make migrate-up",
+    "migrate:down": "make migrate-down",
+    "migrate:down:all": "make migrate-down-all",
+    "migrate:create": "make migrate-create",
+    "codegen": "make sqlc && make gqlgen",
+    "go": "go",
+    "test": "go test",
+    "seed": "go run ./cmd/seed",
+    "build": "go build ./..."
+  },
+  "packageManager": "yarn@4.6.0"
+}

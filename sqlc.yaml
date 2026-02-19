@@ -1,0 +1,16 @@
+version: "2"
+sql:
+  - engine: "postgresql"
+    queries: "src/auth/infrastructure/sqlc/"
+    schema: "migrations/"
+    gen:
+      go:
+        package: "sqlc"
+        out: "src/auth/infrastructure/sqlc/"
+  - engine: "postgresql"
+    queries: "src/user/infrastructure/sqlc/"
+    schema: "migrations/"
+    gen:
+      go:
+        package: "sqlc"
+        out: "src/user/infrastructure/sqlc/"
